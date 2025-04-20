@@ -1,0 +1,261 @@
+/* === 全站通用設定 === */
+/* 字型引入 */
+@font-face {
+  font-family: '庫楷體';
+  src: url('fonts/JasonHandwriting5.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: '水筆仔體';
+  src: url('fonts/jf-openhuninn-2.1.ttf') format('truetype');
+}
+
+/* 標題使用庫楷體 */
+h1,
+.main-title {
+  font-family: '庫楷體', serif;
+}
+
+/* 內文使用水筆仔體 */
+body,
+p,
+.passage-text {
+  font-family: '水筆仔體', sans-serif;
+}
+
+body {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+/* === 標題樣式 === */
+h1,
+.main-title {
+  font-family: '標楷體', 'DFKai-SB', serif;
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  color: #174c90;
+}
+
+/* 封面圖片與 passage 圖片統一樣式 */
+.cover-img {
+  width: 400px;
+  border-radius: 10px;
+  margin: 30px auto;
+  display: block;
+}
+
+/* passage 段落樣式 */
+.passage-text {
+  max-width: 800px;
+  margin: 40px auto;
+  font-size: 20px;
+  line-height: 2;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+/* 問題區塊樣式 */
+.question {
+  padding: 100px 20px;
+}
+
+.question-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.question button {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a6ebb;
+  color: white;
+  width: 280px;
+  cursor: pointer;
+}
+
+.question button:hover {
+  background-color: #174c90;
+}
+
+/* 回饋文字 */
+.feedback {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* 輸入區塊 */
+.input-section {
+  margin-top: 40px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  width: 220px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #2a6ebb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #174c90;
+}
+
+/* ☰ 漢堡選單 */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  color: black;
+}
+
+.sidebar.show {
+  left: 0;
+}
+
+.sidebar .nav-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar hr {
+  margin: 15px 0;
+  border: 0.5px solid #ccc;
+}
+
+.sidebar a,
+.sidebar button {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2a6ebb;
+}
+
+/* === Save Modal 彈窗樣式 === */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+}
+
+.modal-content h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slot-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.slot p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.slot button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  background-color: #2a6ebb;
+  color: white;
+  cursor: pointer;
+}
+
+.slot button:hover {
+  background-color: #174c90;
+}
+
+section {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+section.fade-out {
+  opacity: 0;
+}
+
+section.fade-in {
+  opacity: 1;
+}
